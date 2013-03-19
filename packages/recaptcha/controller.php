@@ -2,24 +2,24 @@
 
 defined('C5_EXECUTE') or die(_("Access Denied."));
 
-class RecaptchaPackage extends Package {
+class KapowPackage extends Package {
 
-	protected $pkgHandle = 'recaptcha';
+	protected $pkgHandle = 'kapow';
 	protected $appVersionRequired = '5.5.0b1';
 	protected $pkgVersion = '1.1';
 	
 	public function getPackageDescription() {
-		return t("Adds reCAPTCHA as a captcha option.");
+		return t("Adds kaPoW puzzles as a captcha alternative.");
 	}
 	
 	public function getPackageName() {
-		return t("reCAPTCHA");
+		return t("kaPoW");
 	}
 	
 	public function install() {
 		$pkg = parent::install();
 		Loader::model('system/captcha/library');
-		SystemCaptchaLibrary::add('recaptcha', t('reCAPTCHA'), $pkg);		
+		SystemCaptchaLibrary::add('kaPoW', t('kaPoW'), $pkg);		
 	}
 	
 }
