@@ -1,8 +1,10 @@
 <?php
 // Copyright (c) Tien Le, Thai Bui, Wu-chang Feng 2007-2011
 // Portland State University
-define('PRIVATE_KEY','');
-define('API_KEY','');
+
+$pkg = Package::getByHandle('kapow');
+define('PRIVATE_KEY', $pkg->config('KAPOW_PRIVATE_KEY'));
+define('API_KEY', $pkg->config('KAPOW_PUBLIC_KEY'));
 define('INTERVAL', 60*5); //period where two keys can exist at the same time.
 define('REFRESHING_TIME', 24 * 3600);
 
