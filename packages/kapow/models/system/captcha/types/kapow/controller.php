@@ -11,7 +11,8 @@ class KapowSystemCaptchaTypeController extends SystemCaptchaTypeController {
 	public function display() {
 		$pkg = Package::getByHandle('kapow');
 		Loader::library('3rdparty/headwinds2lib', 'kapow');
-		echo initialize_kapow()
+		$procURL = Loader::helper('concrete/urls')->getToolsURL('process_url', 'kapow');
+		echo initialize_kapow($procURL)
 	}
 	
 	public function label() {
