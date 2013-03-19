@@ -1,6 +1,6 @@
 <?
 
-class RecaptchaSystemCaptchaTypeController extends SystemCaptchaTypeController {
+class KapowSystemCaptchaTypeController extends SystemCaptchaTypeController {
 	
 	public function saveOptions($args) {
 		$pkg = Package::getByHandle('recaptcha');
